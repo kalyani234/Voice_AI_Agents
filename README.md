@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 # Ensure the script has write permissions and handles existing file
 README_FILE="README.md"
@@ -160,12 +160,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 For questions or support, create a GitHub issue or contact [kalyani234](https://github.com/kalyani234).
-EOF
 
-# Check if README.md was created successfully
-if [ -f "$README_FILE" ]; then
-    echo "✅ README.md created successfully!"
-else
-    echo "❌ Failed to create README.md. Check script permissions or syntax."
-    exit 1
-fi
