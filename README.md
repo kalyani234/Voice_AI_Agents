@@ -1,16 +1,4 @@
 
-
-# Ensure the script has write permissions and handles existing file
-README_FILE="README.md"
-
-# Check if README.md already exists and is writable
-if [ -f "$README_FILE" ] && [ ! -w "$README_FILE" ]; then
-    echo "Error: $README_FILE exists but is not writable. Check permissions."
-    exit 1
-fi
-
-# Use heredoc to create README.md (unquoted EOF allows variable substitution if needed)
-cat > "$README_FILE" << EOF
 # Voice_AI_Agents
 
 ## Description
@@ -37,27 +25,27 @@ The workflow begins when a user speaks into the system. **Silero VAD** detects w
 
 ## Installation
 1. **Clone the Repository**:
-   \`\`\`bash
+   ```
    git clone https://github.com/kalyani234/Voice_AI_Agents.git
    cd Voice_AI_Agents
-   \`\`\`
+   ```
 2. **Create a Virtual Environment** (recommended):
-   \`\`\`bash
+   ```
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\\Scripts\\activate
-   \`\`\`
+   ```
 3. **Install Dependencies**:
-   \`\`\`bash
+   ```
    pip install livekit-agents livekit-agents[cartesia,silero,openai]
-   \`\`\`
+   ```
 4. **Set API Keys**:
    Replace placeholder API keys in the respective project scripts:
-   \`\`\`python
+   ```
    CARTESIA_API_KEY = "your-cartesia-api-key"  # Replace with valid Cartesia key
    CEREBRAS_API_KEY = "your-cerebras-api-key"  # Replace with valid Cerebras key
    os.environ["CARTESIA_API_KEY"] = CARTESIA_API_KEY
    os.environ["CEREBRAS_API_KEY"] = CEREBRAS_API_KEY
-   \`\`\`
+   ```
    **Note**: Ensure API keys have sufficient credits to avoid 402 errors.
 
 5. **Download Context Files**:
@@ -67,7 +55,7 @@ The workflow begins when a user speaks into the system. **Silero VAD** detects w
    Alternatively, manually place these files in the \`context/\` directory.
 
 ## Project Structure
-\`\`\`
+```
 Voice_AI_Agents/
 ├── context/                    # Directory for context files (telecom.json, products.json)
 ├── telecom_customer_support/    # Telecom Customer Support Agent
@@ -78,7 +66,7 @@ Voice_AI_Agents/
 ├── agent_transfers.log         # Log file for sales agent interactions
 ├── requirements.txt            # Shared dependencies
 └── README.md                   # This file
-\`\`\`
+```
 
 ## Telecom Customer Support Agent
 ### Overview
@@ -89,9 +77,9 @@ This project implements a multi-agent system for telecom customer support, with 
 
 ### Usage
 1. **Run the Telecom Agent**:
-   \`\`\`bash
+   ```
    python telecom_customer_support/telecom_agent.py
-   \`\`\`
+   ```
    Or, in a Jupyter environment, execute the notebook cells provided in the code.
 2. **Interact with the Agent**:
    - Start with the Customer Care Agent.
