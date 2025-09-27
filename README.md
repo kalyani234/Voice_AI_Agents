@@ -50,8 +50,8 @@ The workflow begins when a user speaks into the system. **Silero VAD** detects w
 
 5. **Download Context Files**:
    Context files are automatically downloaded during execution:
-   - Telecom: `telecom.json` (from [GitHub Gist](https://gist.githubusercontent.com/kalyani234/88f526a439b0e748b6f83e0a966ce75f/raw/telecom.json))
-   - Sales: `products.json` (from [GitHub Gist](https://gist.githubusercontent.com/ShayneP/f373c26c5166d90446f2bc08baf9bf46/raw/products.json))
+   - Telecom: `telecom.json` (from [telecom](https://gist.githubusercontent.com/kalyani234/88f526a439b0e748b6f83e0a966ce75f/raw/telecom.json))
+   - Sales: `products.json` (from [products](https://gist.githubusercontent.com/ShayneP/f373c26c5166d90446f2bc08baf9bf46/raw/products.json))
    Alternatively, manually place these files in the `context/` directory.
 
 ## Project Structure
